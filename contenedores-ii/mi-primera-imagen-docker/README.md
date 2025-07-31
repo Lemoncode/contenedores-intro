@@ -1,0 +1,1 @@
+# Cómo trabajar con las imágenes de Docker
