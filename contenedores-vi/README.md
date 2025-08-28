@@ -14,57 +14,31 @@ Para que puedas entender perfectamente por qué es súper chulo usar, y aprender
 En resumen: red + base de datos + aplicación + persistencia en volúmenes + comprobación + teardown.
 
 ### 📄 Archivo compose.yml explicado
+El archivo `compose.yml` que se muestra a continuación es una forma declarativa de definir todo lo que hace el script `Crear un Wordpress.sh`, pero de una manera mucho más sencilla, legible y mantenible. Vamos a desglosarlo:
 
-```yaml
-services:
-	db:
-		image: mysql:8.0
-		volumes:
-			- db_data:/var/lib/mysql
-		restart: always
-		environment:
-			MYSQL_ROOT_PASSWORD: root_pwd
-			MYSQL_DATABASE: wpdb
-			MYSQL_USER: wp_user
-			MYSQL_PASSWORD: wp_pwd
-		networks:
-			- wordpress-network
+#### services
 
-	wordpress:
-		depends_on:
-			- db
-		image: wordpress:6.6.2-php8.1-apache
-		volumes:
-			- wordpress_data:/var/www/html
-		ports:
-			- "8000:80"
-		restart: always
-		environment:
-			WORDPRESS_DB_HOST: db:3306
-			WORDPRESS_DB_USER: wp_user
-			WORDPRESS_DB_PASSWORD: wp_pwd
-			WORDPRESS_DB_NAME: wpdb
-		networks:
-			- wordpress-network
+Se trata de la sección donde vamos a tener la definición de los servicios (contenedores) que componen nuestra aplicación.
 
-volumes:
-	db_data:
-	wordpress_data:
+En este caso, tenemos dos servicios: `db` y `wordpress`.
 
-networks:
-	wordpress-network:
-```
-
-Desglose:
-- `services.db`: Contenedor MySQL 8.0. Persistencia con volumen named `db_data` (montado en `/var/lib/mysql`). Variables de entorno inicializan la base y usuario.
+- `db`: Contenedor MySQL 8.0. Persistencia con volumen named `db_data` (montado en `/var/lib/mysql`). Variables de entorno inicializan la base y usuario.
 - `restart: always`: Reinicia el contenedor salvo que lo detengas explícitamente.
 - `networks`: Ambos servicios comparten `wordpress-network` para resolución DNS interna (`db` se resuelve como hostname `db`).
-- `services.wordpress`: Imagen oficial WordPress con Apache + PHP 8.1. Volumen `wordpress_data` para persistir ficheros (plugins, temas, uploads).
+- `wordpress`: Imagen oficial WordPress con Apache + PHP 8.1. Volumen `wordpress_data` para persistir ficheros (plugins, temas, uploads).
 - `depends_on`: Orquesta el arranque lanzando primero `db` (no espera a que MySQL esté listo a nivel de salud; solo orden de inicio).
 - `ports 8000:80`: Expone WordPress externamente en http://localhost:8000.
 - Variables `WORDPRESS_DB_*`: Configuran la conexión a MySQL usando el hostname interno `db` y el puerto `3306`.
-- `volumes` (bloque raíz): Declaración de los volúmenes named para que Docker los cree si no existen.
-- `networks` (bloque raíz): Crea la red bridge aislada para encapsular el stack.
+
+### Volumes
+
+En este bloque se realiza la declaración de los volúmenes named para que Docker los cree si no existen.
+
+
+#### Networks
+
+Se utiliza para crear la red bridge aislada para encapsular el stack.
+
 
 Comandos útiles:
 ```bash
