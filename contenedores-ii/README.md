@@ -48,9 +48,6 @@ Para crear un contenedor con la misma:
  docker run -d -p 8080:80 miweb:dev
  ```
 
-> Navegación: [⬅️ Anterior Contenedores I](../contenedores-i/README.md#videos) · [Siguiente ➡️ Contenedores III](../contenedores-iii/README.md#videos) · [Índice general](../README.md#videos-index)
-
-
 ## ✅ Checklist de avance
 
 - [x] Sabes diferenciar imagen vs contenedor
@@ -58,3 +55,6 @@ Para crear un contenedor con la misma:
 - [x] Has usado tags y comprendido digest SHA256
 - [x] Has revisado documentación de una imagen en Docker Hub
 - [x] Has construido y ejecutado tu propia imagen base
+
+
+> Navegación: [⬅️ Anterior Contenedores I](../contenedores-i/README.md#videos) · [Siguiente ➡️ Contenedores III](../contenedores-iii/README.md#videos) · [Índice general](../README.md#videos-index)
