@@ -97,3 +97,29 @@ docker service scale frontal-web=10
 ```
 
 Esto aumentaría el número de réplicas del servicio `frontal-web` a 10. Docker Swarm se encargaría de crear y distribuir los nuevos contenedores en el clúster.
+
+## 🎬 Vídeos de la clase
+
+### 1. Docker Compose - Teoría
+Motivación, diferencias con ejecutar comandos manuales, declaración vs imperativo, estructura general (`services`, `volumes`, `networks`).
+
+### 2. Docker Compose - Demo 1 - Ejemplo sin docker compose
+Reproducción manual (script) de lo que hará Compose: red + MySQL + WordPress + volúmenes.
+
+### 3. Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose
+Uso de `docker compose up -d`, revisión de logs, persistencia y teardown (`docker compose down`).
+
+### 4. Docker Compose - Crear un Wordpress con Docker Compose (script comparativo)
+Análisis del script `Crear un Wordpress.sh` y mapeo 1:1 a `compose.yml`.
+
+### 5. Docker Compose - Teoría (variables y extensiones)
+Conceptos adicionales: variables de entorno, `.env`, reutilización y override de servicios.
+
+### 6. Docker Swarm - Teoría
+Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliación, escalado declarativo.
+
+### 7. Docker Swarm - Demo 1 - Crear servicio y escalar
+`docker swarm init`, creación de servicio `frontal-web`, escala de réplicas y observación con `docker service ps`.
+
+> Próximos pasos: explorar stacks (`docker stack deploy`) y transición a orquestadores como Kubernetes.
+````
