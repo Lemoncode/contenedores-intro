@@ -2,15 +2,15 @@
 
 Ahora que ya tenemos instalado Docker Desktop y hemos ejecutado nuestros primeros contenedores, ha llegado el momento de contenerizar una aplicación real.
 
-## ⏱️ Duración de los vídeos: (estimado) 47m
+## ⏱️ Duración de los vídeos: (estimado) 41m18s
 
 | # | Vídeo | Estimado |
 |---|-------|----------|
-| 1 | Teoría | 15m |
-| 2 | Demo 1 - Ejecutar la aplicación en local | 5m |
-| 3 | Demo 2 - Mi primera contenerización | 8m |
-| 4 | Demo 3 - Diferentes Dockerfiles | 9m |
-| 5 | Demo 4 - Dockerfiles con multistages | 10m |
+| 1 | Teoría | 17m54s |
+| 2 | Demo 1 - Ejecutar la aplicación en local | 2m29s |
+| 3 | Demo 2 - Mi primera contenerización | 8m41s |
+| 4 | Demo 3 - Diferentes Dockerfiles | 7m14s |
+| 5 | Demo 4 - Dockerfiles con multistages | 5m |
 
 ## 🎬 Vídeos de la clase <a id="videos"></a>
 
