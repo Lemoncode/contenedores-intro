@@ -1,14 +1,10 @@
-# 🧩 Contenedores IV: Docker Compose y Docker Swarm
+# 🧩 Contenedores IV: Docker Compose y Docker Swarm <a id="top"></a>
 
-En este caso, tenemos dos servicios: `db` y `wordpress`.
-- `db`: Contenedor MySQL 8.0. Persistencia con volumen named `db_data` (montado en `/var/lib/mysql`). Variables de entorno inicializan la base y usuario.
-- `restart: always`: Reinicia el contenedor salvo que lo detengas explícitamente.
-- `networks`: Ambos servicios comparten `wordpress-network` para resolución DNS interna (`db` se resuelve como hostname `db`).
-- `wordpress`: Imagen oficial WordPress con Apache + PHP 8.1. Volumen `wordpress_data` para persistir ficheros (plugins, temas, uploads).
-- `depends_on`: Orquesta el arranque lanzando primero `db` (no espera a que MySQL esté listo a nivel de salud; solo orden de inicio).
-- `ports 8000:80`: Expone WordPress externamente en http://localhost:8000.
-- Variables `WORDPRESS_DB_*`: Configuran la conexión a MySQL usando el hostname interno `db` y el puerto `3306`.
-# 🧩 Contenedores IV: Docker Compose y Docker Swarm
+## 📑 Índice rápido
+- [Docker Compose](#🐙-docker-compose)
+- [Docker Swarm](#🐝-docker-swarm)
+- [Vídeos](#videos)
+- [Volver al índice general](../README.md#🎬-Índice-navegable-de-apartados-y-vídeos)
 
 # 🐙 Docker Compose
 
@@ -103,22 +99,22 @@ Esto aumentaría el número de réplicas del servicio `frontal-web` a 10. Docker
 
 ## 🎬 Vídeos de la clase <a id="videos"></a>
 
-### 1. Docker Compose - Teoría
+### 1. Docker Compose - Teoría <a id="v6-compose-teoria"></a>
 Motivación, diferencias con ejecutar comandos manuales, declaración vs imperativo, estructura general (`services`, `volumes`, `networks`).
 
-### 2. Docker Compose - Demo 1 - Ejemplo sin docker compose
+### 2. Docker Compose - Demo 1 - Ejemplo sin docker compose <a id="v6-compose-demo1-sin-compose"></a>
 Reproducción manual (script) de lo que hará Compose: red + MySQL + WordPress + volúmenes.
 
-### 3. Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose
+### 3. Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose <a id="v6-compose-demo1-wordpress"></a>
 Uso de `docker compose up -d`, revisión de logs, persistencia y teardown (`docker compose down`).
 
-### 4. Docker Compose - Crear un Wordpress con Docker Compose (script comparativo)
+### 4. Docker Compose - Crear un Wordpress con Docker Compose (script comparativo) <a id="v6-compose-script-comparativo"></a>
 Análisis del script `Crear un Wordpress.sh` y mapeo 1:1 a `compose.yml`.
 
-### 5. Docker Swarm - Teoría
+### 5. Docker Swarm - Teoría <a id="v6-swarm-teoria"></a>
 Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliación, escalado declarativo.
 
-### 6. Docker Swarm - Demo 1 - Crear servicio y escalar
+### 6. Docker Swarm - Demo 1 - Crear servicio y escalar <a id="v6-swarm-demo1-escalar"></a>
 `docker swarm init`, creación de servicio `frontal-web`, escala de réplicas y observación con `docker service ps`.
 
 > Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
