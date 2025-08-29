@@ -1,5 +1,15 @@
 # 🧩 Contenedores IV: Docker Compose y Docker Swarm
 
+En este caso, tenemos dos servicios: `db` y `wordpress`.
+- `db`: Contenedor MySQL 8.0. Persistencia con volumen named `db_data` (montado en `/var/lib/mysql`). Variables de entorno inicializan la base y usuario.
+- `restart: always`: Reinicia el contenedor salvo que lo detengas explícitamente.
+- `networks`: Ambos servicios comparten `wordpress-network` para resolución DNS interna (`db` se resuelve como hostname `db`).
+- `wordpress`: Imagen oficial WordPress con Apache + PHP 8.1. Volumen `wordpress_data` para persistir ficheros (plugins, temas, uploads).
+- `depends_on`: Orquesta el arranque lanzando primero `db` (no espera a que MySQL esté listo a nivel de salud; solo orden de inicio).
+- `ports 8000:80`: Expone WordPress externamente en http://localhost:8000.
+- Variables `WORDPRESS_DB_*`: Configuran la conexión a MySQL usando el hostname interno `db` y el puerto `3306`.
+# 🧩 Contenedores IV: Docker Compose y Docker Swarm
+
 # 🐙 Docker Compose
 
 Para que puedas entender perfectamente por qué es súper chulo usar, y aprender, Docker Compose, te recomiendo que eches antes un vistazo a [Crear un Wordpress.sh](Crear%20un%20Wordpress.sh). En este archivo se relatan todos los comandos que te harían falta si quisieras crear manualmente (uno a uno) todo lo necesario para tener un WordPress contenerizado. Paso a paso, el script realiza:
@@ -22,13 +32,6 @@ Se trata de la sección donde vamos a tener la definición de los servicios (con
 
 En este caso, tenemos dos servicios: `db` y `wordpress`.
 
-- `db`: Contenedor MySQL 8.0. Persistencia con volumen named `db_data` (montado en `/var/lib/mysql`). Variables de entorno inicializan la base y usuario.
-- `restart: always`: Reinicia el contenedor salvo que lo detengas explícitamente.
-- `networks`: Ambos servicios comparten `wordpress-network` para resolución DNS interna (`db` se resuelve como hostname `db`).
-- `wordpress`: Imagen oficial WordPress con Apache + PHP 8.1. Volumen `wordpress_data` para persistir ficheros (plugins, temas, uploads).
-- `depends_on`: Orquesta el arranque lanzando primero `db` (no espera a que MySQL esté listo a nivel de salud; solo orden de inicio).
-- `ports 8000:80`: Expone WordPress externamente en http://localhost:8000.
-- Variables `WORDPRESS_DB_*`: Configuran la conexión a MySQL usando el hostname interno `db` y el puerto `3306`.
 
 ### Volumes
 
@@ -98,7 +101,7 @@ docker service scale frontal-web=10
 
 Esto aumentaría el número de réplicas del servicio `frontal-web` a 10. Docker Swarm se encargaría de crear y distribuir los nuevos contenedores en el clúster.
 
-## 🎬 Vídeos de la clase
+## 🎬 Vídeos de la clase <a id="videos"></a>
 
 ### 1. Docker Compose - Teoría
 Motivación, diferencias con ejecutar comandos manuales, declaración vs imperativo, estructura general (`services`, `volumes`, `networks`).
@@ -112,14 +115,11 @@ Uso de `docker compose up -d`, revisión de logs, persistencia y teardown (`dock
 ### 4. Docker Compose - Crear un Wordpress con Docker Compose (script comparativo)
 Análisis del script `Crear un Wordpress.sh` y mapeo 1:1 a `compose.yml`.
 
-### 5. Docker Compose - Teoría (variables y extensiones)
-Conceptos adicionales: variables de entorno, `.env`, reutilización y override de servicios.
-
-### 6. Docker Swarm - Teoría
+### 5. Docker Swarm - Teoría
 Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliación, escalado declarativo.
 
-### 7. Docker Swarm - Demo 1 - Crear servicio y escalar
+### 6. Docker Swarm - Demo 1 - Crear servicio y escalar
 `docker swarm init`, creación de servicio `frontal-web`, escala de réplicas y observación con `docker service ps`.
 
-> Próximos pasos: explorar stacks (`docker stack deploy`) y transición a orquestadores como Kubernetes.
-````
+> Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
+

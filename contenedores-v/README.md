@@ -2,7 +2,7 @@
 
 En este módulo profundizamos en cómo Docker implementa redes y cómo aprovechar diferentes drivers según el escenario.
 
-## 🎬 Vídeos de la clase
+## 🎬 Vídeos de la clase <a id="videos"></a>
 
 ### 1. Teoría - Basics networking
 Espacio de nombres de red, interfaces virtuales, bridge linux, asignación IP, DNS interno y comunicación container↔host.
@@ -22,4 +22,4 @@ Ejecución con `--network host` (limitado en Docker Desktop), diferencias de per
 ### 6. Demo 4 - Conectarse a la red no red
 Uso de `--network none`, aislamiento completo y escenarios de pruebas / hardening.
 
-> Siguiente: orquestación con `contenedores-vi` (Compose & Swarm).
+> Navegación: [⬅️ Anterior Contenedores IV](../contenedores-iv/README.md#videos) · [Siguiente ➡️ Contenedores VI](../contenedores-vi/README.md#videos) · [Índice general](../README.md#videos-index)

@@ -11,7 +11,7 @@ Para descargarlo, [ve a la página oficial de Docker](https://www.docker.com/) y
 ## Nuestro primer contenedor
 
 
-## 🎬 Vídeos de la clase
+## 🎬 Vídeos de la clase <a id="videos"></a>
 
 ### 1. Teoría
 Repaso de qué es Docker, diferencias con máquinas virtuales, capas (Union FS), imágenes vs contenedores, registro y flujo build -> ship -> run.
@@ -28,5 +28,5 @@ Uso de la interfaz gráfica para lanzar una imagen oficial (hello-world / nginx)
 ### 5. Demo 4 - Cómo crear tus primeros contenedores desde el terminal
 Primeros comandos: `docker pull`, `docker run`, flags `-d -p --name`, listar con `docker ps`, parar, eliminar (`docker stop`, `docker rm`), ver logs y shell interactivo (`docker exec -it`).
 
-> Siguiente: continúa con el módulo `contenedores-ii` para construir tu primera imagen.
+> Navegación: [Siguiente ➡️ Contenedores II](../contenedores-ii/README.md#videos) · [Índice general](../README.md#videos-index)
 

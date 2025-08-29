@@ -103,7 +103,7 @@ Guía rápida:
 
 El almacenamiento es un aspecto crucial al trabajar con contenedores Docker. Comprender los diferentes tipos de almacenamiento y cómo utilizarlos te permitirá gestionar mejor los datos en tus aplicaciones contenerizadas.
 
-## 🎬 Vídeos de la clase
+## 🎬 Vídeos de la clase <a id="videos"></a>
 
 ### 1. Almacenamiento - Teoría
 Tipos (bind mount, volumen, tmpfs), casos de uso, performance, lifecycle y copia inicial de datos en volúmenes vacíos.
@@ -129,4 +129,4 @@ Lectura de uso de CPU, memoria, red y bloqueos para varios contenedores simultá
 ### 8. Monitorización - Demo 3 - docker logs
 Uso de `docker logs -f`, rotación básica, timestamps y filtrado.
 
-> Siguiente: continúa con redes en `contenedores-v`.
+> Navegación: [⬅️ Anterior Contenedores III](../contenedores-iii/README.md#videos) · [Siguiente ➡️ Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)

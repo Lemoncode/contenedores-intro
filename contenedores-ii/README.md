@@ -2,7 +2,7 @@
 
 En este módulo aprenderás a inspeccionar, entender y construir imágenes de Docker de forma eficiente.
 
-## 🎬 Vídeos de la clase
+## 🎬 Vídeos de la clase <a id="videos"></a>
 
 ### 1. Teoría
 Conceptos: qué es una imagen, capas (layers), union filesystem, caching, diferencia entre imagen y contenedor, registries (Docker Hub), tags y digest (contenido inmutable via SHA256).
@@ -19,4 +19,4 @@ Cómo localizar imágenes oficiales vs community, leer la documentación, encont
 ### 5. Demo 4 - Mi primera imagen de Docker
 Creación de un `Dockerfile` sencillo para servir contenido estático con `nginx` usando el ejemplo de `mi-primera-imagen-docker/`. Comandos: `docker build -t miweb:dev .` y prueba con `docker run -d -p 8080:80 miweb:dev`.
 
-> Siguiente: ve a `contenedores-iii` para contenerizar una aplicación Node.js con distintos Dockerfiles.
+> Navegación: [⬅️ Anterior Contenedores I](../contenedores-i/README.md#videos) · [Siguiente ➡️ Contenedores III](../contenedores-iii/README.md#videos) · [Índice general](../README.md#videos-index)
