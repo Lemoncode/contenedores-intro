@@ -112,25 +112,23 @@ Esto aumentaría el número de réplicas del servicio `frontal-web` a 10. Docker
 
 ## 🎬 Vídeos de la clase <a id="videos"></a>
 
-### 1. Docker Compose - Teoría <a id="v6-compose-teoria"></a>
+### 1. 📘 Docker Compose - Teoría <a id="v6-compose-teoria"></a>
 Motivación, diferencias con ejecutar comandos manuales, declaración vs imperativo, estructura general (`services`, `volumes`, `networks`).
 
-### 2. Docker Compose - Demo 1 - Ejemplo sin docker compose <a id="v6-compose-demo1-sin-compose"></a>
+### 2. 🧪 Docker Compose - Demo 1 - Ejemplo sin docker compose <a id="v6-compose-demo1-sin-compose"></a>
 Reproducción manual (script) de lo que hará Compose: red + MySQL + WordPress + volúmenes.
 
-### 3. Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose <a id="v6-compose-demo1-wordpress"></a>
+### 3. 🛠️ Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose <a id="v6-compose-demo1-wordpress"></a>
 Uso de `docker compose up -d`, revisión de logs, persistencia y teardown (`docker compose down`).
 
-### 4. Docker Compose - Script comparativo <a id="v6-compose-script-comparativo"></a>
+### 4. 🧾 Docker Compose - Script comparativo <a id="v6-compose-script-comparativo"></a>
 Análisis del script `Crear un Wordpress.sh` y mapeo 1:1 a `compose.yml`.
 
-### 5. Docker Swarm - Teoría <a id="v6-swarm-teoria"></a>
+### 5. 📘 Docker Swarm - Teoría <a id="v6-swarm-teoria"></a>
 Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliación, escalado declarativo.
 
-### 6. Docker Swarm - Demo 1 - Crear servicio y escalar <a id="v6-swarm-demo1-escalar"></a>
+### 6. 📈 Docker Swarm - Demo 1 - Crear servicio y escalar <a id="v6-swarm-demo1-escalar"></a>
 `docker swarm init`, creación de servicio `frontal-web`, escala de réplicas y observación con `docker service ps`.
-
-> Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
 
 ## ✅ Qué has aprendido hoy
 
@@ -140,5 +138,7 @@ Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliac
 - [x] Has inicializado un swarm local
 - [x] Has creado un servicio y escalado réplicas
 - [x] Has inspeccionado tareas con `docker service ps`
+
+> 🧭 Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
 
 

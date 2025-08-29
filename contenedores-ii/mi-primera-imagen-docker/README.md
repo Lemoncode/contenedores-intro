@@ -1,4 +1,4 @@
-# Mi primera imagen de Docker
+# 🧪 Mi primera imagen de Docker
 
 Este directorio contiene los archivos usados en la demo "Mi primera imagen de Docker" del módulo Contenedores II. Construimos una imagen sencilla basada en `nginx` para servir contenido estático.
 

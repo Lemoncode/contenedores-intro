@@ -10,7 +10,7 @@
 
 Este curso te llevará desde los conceptos básicos de Docker hasta técnicas avanzadas como Docker Compose y Docker Swarm, con ejemplos prácticos y demos que puedes seguir paso a paso.
 
-##  Índice navegable de apartados y vídeos <a id="videos-index"></a>
+## 🎬 Índice navegable de apartados y vídeos <a id="videos-index"></a>
 
 ### 📚 Contenedores I ([README](contenedores-i/README.md#videos))
 1. 📘 [Teoría](contenedores-i/README.md#v1-teoria)
