@@ -2,6 +2,17 @@
 
 En este módulo profundizamos en cómo Docker implementa redes y cómo aprovechar diferentes drivers según el escenario.
 
+## ⏱️ Duración de los vídeos: (estimado) 46m
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Teoría - Basics networking | 11m |
+| 2 | Teoría - Tipos de redes | 12m |
+| 3 | Demo 1 - Listar redes y probar bridge | 6m |
+| 4 | Demo 2 - Cómo crear redes | 7m |
+| 5 | Demo 3 - Red de tipo host | 5m |
+| 6 | Demo 4 - Red none | 5m |
+
 ## 📑 Índice rápido
 - [Vídeos](#videos)
 - [Volver al índice general](../README.md#🎬-Índice-navegable-de-apartados-y-vídeos)
@@ -28,20 +39,7 @@ Uso de `--network none`, aislamiento completo y escenarios de pruebas / hardenin
 
 > Navegación: [⬅️ Anterior Contenedores IV](../contenedores-iv/README.md#videos) · [Siguiente ➡️ Contenedores VI](../contenedores-vi/README.md#videos) · [Índice general](../README.md#videos-index)
 
-## ⏱️ Duración estimada
-
-| # | Vídeo | Estimado |
-|---|-------|----------|
-| 1 | Teoría Basics | 11m |
-| 2 | Teoría Tipos redes | 12m |
-| 3 | Demo 1 (bridge) | 6m |
-| 4 | Demo 2 (crear redes) | 7m |
-| 5 | Demo 3 (host) | 5m |
-| 6 | Demo 4 (none) | 5m |
-
-> Ajusta los tiempos cuando tengas las duraciones reales.
-
-## ✅ Checklist de avance
+## ✅ Qué has aprendido hoy
 
 - [x] Comprendes namespaces y bridge por defecto
 - [x] Has listado y descrito redes existentes

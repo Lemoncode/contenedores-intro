@@ -1,4 +1,17 @@
-# 🧩 Contenedores IV: Docker Compose y Docker Swarm <a id="top"></a>
+# 🧩 Docker Compose y Docker Swarm <a id="top"></a>
+
+En esta clase verás cómo declarar stacks multi-contenedor con Docker Compose y una introducción a orquestación con Docker Swarm (servicios y escalado).
+
+## ⏱️ Duración de los vídeos: (estimado) 59m
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Docker Compose - Teoría | 14m |
+| 2 | Docker Compose - Demo 1 - Ejemplo sin docker compose | 9m |
+| 3 | Docker Compose - Demo 1 - Crear un Wordpress | 10m |
+| 4 | Docker Compose - Script comparativo | 6m |
+| 5 | Docker Swarm - Teoría | 12m |
+| 6 | Docker Swarm - Demo 1 - Crear servicio y escalar | 8m |
 
 ## 📑 Índice rápido
 - [Docker Compose](#🐙-docker-compose)
@@ -6,7 +19,7 @@
 - [Vídeos](#videos)
 - [Volver al índice general](../README.md#🎬-Índice-navegable-de-apartados-y-vídeos)
 
-# 🐙 Docker Compose
+## 🐙 Docker Compose
 
 Para que puedas entender perfectamente por qué es súper chulo usar, y aprender, Docker Compose, te recomiendo que eches antes un vistazo a [Crear un Wordpress.sh](Crear%20un%20Wordpress.sh). En este archivo se relatan todos los comandos que te harían falta si quisieras crear manualmente (uno a uno) todo lo necesario para tener un WordPress contenerizado. Paso a paso, el script realiza:
 
@@ -51,7 +64,7 @@ docker compose down -v    # Parar y eliminar incluyendo volúmenes
 Si necesitas esperar a que MySQL acepte conexiones antes de que WordPress se configure, podrías añadir un `healthcheck` al servicio `db` y usar `depends_on` con condición en Compose v3.9+.
 
 
-# 🐝 Docker Swarm
+## 🐝 Docker Swarm
 
 Cuando ya nos ponemos serios con Docker y queremos orquestar múltiples contenedores en varios nodos (máquinas), Docker Swarm es una solución integrada en Docker que permite crear y gestionar clusters de contenedores de forma sencilla. 
 
@@ -108,7 +121,7 @@ Reproducción manual (script) de lo que hará Compose: red + MySQL + WordPress +
 ### 3. Docker Compose - Demo 1 - Crear un Wordpress con Docker Compose <a id="v6-compose-demo1-wordpress"></a>
 Uso de `docker compose up -d`, revisión de logs, persistencia y teardown (`docker compose down`).
 
-### 4. Docker Compose - Crear un Wordpress con Docker Compose (script comparativo) <a id="v6-compose-script-comparativo"></a>
+### 4. Docker Compose - Script comparativo <a id="v6-compose-script-comparativo"></a>
 Análisis del script `Crear un Wordpress.sh` y mapeo 1:1 a `compose.yml`.
 
 ### 5. Docker Swarm - Teoría <a id="v6-swarm-teoria"></a>
@@ -119,20 +132,7 @@ Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliac
 
 > Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
 
-## ⏱️ Duración estimada
-
-| # | Vídeo | Estimado |
-|---|-------|----------|
-| 1 | Compose - Teoría | 14m |
-| 2 | Demo 1 (sin compose) | 9m |
-| 3 | Demo 1 (Wordpress compose) | 10m |
-| 4 | Script comparativo | 6m |
-| 5 | Swarm - Teoría | 12m |
-| 6 | Swarm - Demo escalar | 8m |
-
-> Ajusta los tiempos cuando tengas las duraciones reales.
-
-## ✅ Checklist de avance
+## ✅ Qué has aprendido hoy
 
 - [x] Entiendes diferencias enfoque manual vs declarativo (Compose)
 - [x] Has levantado stack WordPress con compose.yml

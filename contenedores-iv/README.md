@@ -1,6 +1,45 @@
-# 🗄️ Almacenamiento en Docker <a id="top"></a>
+# 🗄️ Almacenamiento y Monitorización en Docker <a id="top"></a>
 
-Cuando estamos hablando de contenedores, uno de los temas más importantes es el almacenamiento de datos. En esta clase aprenderemos sobre los diferentes tipos de almacenamiento que Docker ofrece y cómo utilizarlos en nuestros contenedores.
+En esta clase aprenderás los diferentes tipos de almacenamiento que Docker ofrece (bind mount, volumen, tmpfs), sus casos de uso y también conceptos básicos de monitorización (events, stats, logs) para operar contenedores.
+
+## ⏱️ Duración de los vídeos: (estimado) 54m
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Almacenamiento - Teoría | 12m |
+| 2 | Almacenamiento - Demo 1 - Bind mount | 6m |
+| 3 | Almacenamiento - Demo 2 - Volumen | 7m |
+| 4 | Almacenamiento - Demo 3 - Tmpfs | 4m |
+| 5 | Monitorización - Teoría | 10m |
+| 6 | Monitorización - Demo 1 - docker events | 5m |
+| 7 | Monitorización - Demo 2 - docker stats | 5m |
+| 8 | Monitorización - Demo 3 - docker logs | 5m |
+
+## 🎬 Vídeos de la clase <a id="videos"></a>
+
+### 1. Almacenamiento - Teoría <a id="v4-almacenamiento-teoria"></a>
+Tipos (bind mount, volumen, tmpfs), casos de uso, performance, lifecycle y copia inicial de datos en volúmenes vacíos.
+
+### 2. Almacenamiento - Demo 1 - Bind mount <a id="v4-demo1-bind"></a>
+Montaje de carpeta local `web-content` en contenedor `nginx` para hot-reload de contenido estático.
+
+### 3. Almacenamiento - Demo 2 - Volumen <a id="v4-demo2-volumen"></a>
+Creación y uso de volúmenes named, ver copia inicial, inspección y persistencia tras recrear contenedor.
+
+### 4. Almacenamiento - Demo 3 - Tmpfs <a id="v4-demo3-tmpfs"></a>
+Uso teórico/práctico de `--mount type=tmpfs` para datos efímeros en memoria y limitaciones en Docker Desktop.
+
+### 5. Monitorización - Teoría <a id="v4-monitorizacion-teoria"></a>
+Visión general: eventos, métricas de recursos, logs, buenas prácticas de observabilidad en entornos container.
+
+### 6. Monitorización - Demo 1 - docker events <a id="v4-demo1-events"></a>
+Escucha en tiempo real de lifecycle de contenedores y creación/eliminación de recursos.
+
+### 7. Monitorización - Demo 2 - docker stats <a id="v4-demo2-stats"></a>
+Lectura de uso de CPU, memoria, red y bloqueos para varios contenedores simultáneamente.
+
+### 8. Monitorización - Demo 3 - docker logs <a id="v4-demo3-logs"></a>
+Uso de `docker logs -f`, rotación básica, timestamps y filtrado.
 
 ## 📑 Índice rápido
 - [Tipos de almacenamiento](#📂-tipos-de-almacenamiento-en-docker)
@@ -110,50 +149,9 @@ Guía rápida:
 
 El almacenamiento es un aspecto crucial al trabajar con contenedores Docker. Comprender los diferentes tipos de almacenamiento y cómo utilizarlos te permitirá gestionar mejor los datos en tus aplicaciones contenerizadas.
 
-## 🎬 Vídeos de la clase <a id="videos"></a>
-
-### 1. Almacenamiento - Teoría <a id="v4-almacenamiento-teoria"></a>
-Tipos (bind mount, volumen, tmpfs), casos de uso, performance, lifecycle y copia inicial de datos en volúmenes vacíos.
-
-### 2. Almacenamiento - Demo 1 - Bind mount <a id="v4-demo1-bind"></a>
-Montaje de carpeta local `web-content` en contenedor `nginx` para hot-reload de contenido estático.
-
-### 3. Almacenamiento - Demo 2 - Volumen <a id="v4-demo2-volumen"></a>
-Creación y uso de volúmenes named, ver copia inicial, inspección y persistencia tras recrear contenedor.
-
-### 4. Almacenamiento - Demo 3 - Tmpfs <a id="v4-demo3-tmpfs"></a>
-Uso teórico/práctico de `--mount type=tmpfs` para datos efímeros en memoria y limitaciones en Docker Desktop.
-
-### 5. Monitorización - Teoría <a id="v4-monitorizacion-teoria"></a>
-Visión general: eventos, métricas de recursos, logs, buenas prácticas de observabilidad en entornos container.
-
-### 6. Monitorización - Demo 1 - docker events <a id="v4-demo1-events"></a>
-Escucha en tiempo real de lifecycle de contenedores y creación/eliminación de recursos.
-
-### 7. Monitorización - Demo 2 - docker stats <a id="v4-demo2-stats"></a>
-Lectura de uso de CPU, memoria, red y bloqueos para varios contenedores simultáneamente.
-
-### 8. Monitorización - Demo 3 - docker logs <a id="v4-demo3-logs"></a>
-Uso de `docker logs -f`, rotación básica, timestamps y filtrado.
-
 > Navegación: [⬅️ Anterior Contenedores III](../contenedores-iii/README.md#videos) · [Siguiente ➡️ Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
 
-## ⏱️ Duración estimada
-
-| # | Vídeo | Estimado |
-|---|-------|----------|
-| 1 | Almacenamiento - Teoría | 12m |
-| 2 | Demo 1 (Bind) | 6m |
-| 3 | Demo 2 (Volumen) | 7m |
-| 4 | Demo 3 (Tmpfs) | 4m |
-| 5 | Monitorización - Teoría | 10m |
-| 6 | Demo docker events | 5m |
-| 7 | Demo docker stats | 5m |
-| 8 | Demo docker logs | 5m |
-
-> Ajusta los tiempos cuando tengas las duraciones reales.
-
-## ✅ Checklist de avance
+## ✅ Qué has aprendido hoy
 
 - [x] Diferencias bind mount vs volumen vs tmpfs
 - [x] Has montado un bind mount para contenido estático
