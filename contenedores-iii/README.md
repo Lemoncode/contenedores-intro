@@ -24,3 +24,24 @@ Separación de `Dockerfile` (prod), `Dockerfile.dev` (montajes, nodemon) y optim
 Implementación de `Dockerfile.multistages` para reducir tamaño: stage build (instalación completa y compilación si aplica) y stage runtime (imagen ligera final con solo artefactos necesarios).
 
 > Navegación: [⬅️ Anterior Contenedores II](../contenedores-ii/README.md#videos) · [Siguiente ➡️ Contenedores IV](../contenedores-iv/README.md#videos) · [Índice general](../README.md#videos-index)
+
+## ⏱️ Duración estimada
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Teoría | 15m |
+| 2 | Demo 1 (Local) | 5m |
+| 3 | Demo 2 (Dockerfile base) | 8m |
+| 4 | Demo 3 (Variantes) | 9m |
+| 5 | Demo 4 (Multistage) | 10m |
+
+> Ajusta los tiempos cuando tengas las duraciones reales.
+
+## ✅ Checklist de avance
+
+- [x] Has ejecutado la app Node.js en local
+- [x] Has creado un Dockerfile base funcional
+- [x] Has separado Dockerfiles para dev/prod
+- [x] Has creado un multi-stage build
+- [x] Has comprobado reducción de tamaño de imagen
+

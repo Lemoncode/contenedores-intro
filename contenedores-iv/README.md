@@ -137,3 +137,30 @@ Lectura de uso de CPU, memoria, red y bloqueos para varios contenedores simultá
 Uso de `docker logs -f`, rotación básica, timestamps y filtrado.
 
 > Navegación: [⬅️ Anterior Contenedores III](../contenedores-iii/README.md#videos) · [Siguiente ➡️ Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
+
+## ⏱️ Duración estimada
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Almacenamiento - Teoría | 12m |
+| 2 | Demo 1 (Bind) | 6m |
+| 3 | Demo 2 (Volumen) | 7m |
+| 4 | Demo 3 (Tmpfs) | 4m |
+| 5 | Monitorización - Teoría | 10m |
+| 6 | Demo docker events | 5m |
+| 7 | Demo docker stats | 5m |
+| 8 | Demo docker logs | 5m |
+
+> Ajusta los tiempos cuando tengas las duraciones reales.
+
+## ✅ Checklist de avance
+
+- [x] Diferencias bind mount vs volumen vs tmpfs
+- [x] Has montado un bind mount para contenido estático
+- [x] Has creado y usado un volumen named
+- [x] Entiendes la copia inicial al montar un volumen vacío
+- [x] Has probado (o entendido limitaciones) de tmpfs
+- [x] Has usado `docker events` para observar lifecycle
+- [x] Has revisado consumo con `docker stats`
+- [x] Has seguido logs en tiempo real
+

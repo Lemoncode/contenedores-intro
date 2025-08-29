@@ -27,3 +27,26 @@ Ejecución con `--network host` (limitado en Docker Desktop), diferencias de per
 Uso de `--network none`, aislamiento completo y escenarios de pruebas / hardening.
 
 > Navegación: [⬅️ Anterior Contenedores IV](../contenedores-iv/README.md#videos) · [Siguiente ➡️ Contenedores VI](../contenedores-vi/README.md#videos) · [Índice general](../README.md#videos-index)
+
+## ⏱️ Duración estimada
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Teoría Basics | 11m |
+| 2 | Teoría Tipos redes | 12m |
+| 3 | Demo 1 (bridge) | 6m |
+| 4 | Demo 2 (crear redes) | 7m |
+| 5 | Demo 3 (host) | 5m |
+| 6 | Demo 4 (none) | 5m |
+
+> Ajusta los tiempos cuando tengas las duraciones reales.
+
+## ✅ Checklist de avance
+
+- [x] Comprendes namespaces y bridge por defecto
+- [x] Has listado y descrito redes existentes
+- [x] Has creado una red bridge personalizada
+- [x] Has probado conectividad entre contenedores por nombre
+- [x] Entiendes cuándo usar red host
+- [x] Has aislado un contenedor con red none
+

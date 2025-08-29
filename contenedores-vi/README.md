@@ -119,3 +119,26 @@ Conceptos: nodo manager/worker, servicios, tareas, overlay networks, reconciliac
 
 > Navegación: [⬅️ Anterior Contenedores V](../contenedores-v/README.md#videos) · [Índice general](../README.md#videos-index)
 
+## ⏱️ Duración estimada
+
+| # | Vídeo | Estimado |
+|---|-------|----------|
+| 1 | Compose - Teoría | 14m |
+| 2 | Demo 1 (sin compose) | 9m |
+| 3 | Demo 1 (Wordpress compose) | 10m |
+| 4 | Script comparativo | 6m |
+| 5 | Swarm - Teoría | 12m |
+| 6 | Swarm - Demo escalar | 8m |
+
+> Ajusta los tiempos cuando tengas las duraciones reales.
+
+## ✅ Checklist de avance
+
+- [x] Entiendes diferencias enfoque manual vs declarativo (Compose)
+- [x] Has levantado stack WordPress con compose.yml
+- [x] Has comparado script vs archivo Compose
+- [x] Has inicializado un swarm local
+- [x] Has creado un servicio y escalado réplicas
+- [x] Has inspeccionado tareas con `docker service ps`
+
+
